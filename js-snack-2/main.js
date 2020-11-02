@@ -21,10 +21,13 @@ $(document).ready(function() {
         }
     }
 
+    // Creo un array vuoto per popolarlo con i valori dei nomi scelti dall'utente
     var nuovo_nomi = [];
 
+    // Faccio un ciclo for per ciclare l'array nomi
     for (var i = 0; i <= nomi.length; i++) {
 
+        // Creo un if per pushare solo i nomi in posizione comprese tra i numeri selezionati dall'utente
         if( i >= array_numeri[0] && i <= array_numeri[1]){
             nuovo_nomi.push(nomi[i]);
         }
@@ -33,6 +36,11 @@ $(document).ready(function() {
 
 
     console.log(nuovo_nomi);
+
+    // Creo una variabile di appoggio per inserire il trattino
+    var stringa_nuovo_nomi = nuovo_nomi.join(" - ")
+    // Stampo i nomi in pagina
+    $("strong").text(stringa_nuovo_nomi)
 
 
 
