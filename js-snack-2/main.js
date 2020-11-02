@@ -12,7 +12,7 @@ $(document).ready(function() {
     // chiedere all'utente due numeri
     while(array_numeri.length < 2) {
 
-        var numeri_utente = parseInt(prompt("Inserisci un numero tra 0 e 7"));
+        var numeri_utente = parseInt(prompt("Inserisci un numero tra 0 e 6"));
 
         if(!isNaN(numeri_utente) && numeri_utente >= 0 && numeri_utente <= 6){
             array_numeri.push(numeri_utente);
@@ -21,11 +21,18 @@ $(document).ready(function() {
         }
     }
 
+    var nuovo_nomi = [];
+
+    for (var i = 0; i <= nomi.length; i++) {
+
+        if( i >= array_numeri[0] && i <= array_numeri[1]){
+            nuovo_nomi.push(nomi[i]);
+        }
+
+    }
 
 
-    console.log(array_numeri);
-
-    console.log(nomi[array_numeri[0]] + nomi[array_numeri[1]]);
+    console.log(nuovo_nomi);
 
 
 
